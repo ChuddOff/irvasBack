@@ -22,7 +22,6 @@ const logger = app.use((req, res, next) => {
 
     console.log(log)
 
-    fs.appendFileSync(Logs, log, { encoding: `utf-8` })
     next()
 })
 
