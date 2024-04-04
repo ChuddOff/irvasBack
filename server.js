@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(logger)
 app.use(cors)
-// app.use("/api/zamer", zamer)
+app.use("/api/zamer", zamer)
 
 app.get('/', (req, res) => {
     res.json("text")
