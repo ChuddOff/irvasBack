@@ -19,19 +19,19 @@ app.get('/', (req, res) => {
     res.json("text")
 })
 
-// mongoose.connect(
-//     process.env.MONGO_URI,
-//     {
-//         serverApi: {
-//             version: ServerApiVersion.v1,
-//             strict: true,
-//             deprecationErrors: true,
-//             useNewUrlParser: true,
-//             useUnifiedTopology: true,
-//             useFindAndModify: false
-//         }
-//     }
-// ).then(()=>console.log('connected')).catch(e=>console.log(e));
+mongoose.connect(
+    process.env.MONGO_URI,
+    {
+        serverApi: {
+            version: ServerApiVersion.v1,
+            strict: true,
+            deprecationErrors: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false
+        }
+    }
+).then(()=>console.log('connected')).catch(e=>console.log(e));
 
 
 app.listen(port)
