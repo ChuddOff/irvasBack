@@ -11,27 +11,27 @@ const port = process.env.PORT ?? 4000;
 
 const app = express();
 app.use(express.json());
-app.use(logger)
-app.use(cors)
-app.use("/api/zamer", zamer)
+// app.use(logger)
+// app.use(cors)
+// app.use("/api/zamer", zamer)
 
 app.get('/', (req, res) => {
-    res.send("text")
+    res.json("text")
 })
 
-mongoose.connect(
-    process.env.MONGO_URI,
-    {
-        serverApi: {
-            version: ServerApiVersion.v1,
-            strict: true,
-            deprecationErrors: true,
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false
-        }
-    }
-).then(()=>console.log('connected')).catch(e=>console.log(e));
+// mongoose.connect(
+//     process.env.MONGO_URI,
+//     {
+//         serverApi: {
+//             version: ServerApiVersion.v1,
+//             strict: true,
+//             deprecationErrors: true,
+//             useNewUrlParser: true,
+//             useUnifiedTopology: true,
+//             useFindAndModify: false
+//         }
+//     }
+// ).then(()=>console.log('connected')).catch(e=>console.log(e));
 
 
 app.listen(port)
