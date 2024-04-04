@@ -12,7 +12,7 @@ const port = process.env.PORT ?? 4000;
 const app = express();
 app.use(express.json());
 app.use(logger)
-// app.use(cors)
+app.use(cors)
 // app.use("/api/zamer", zamer)
 
 app.get('/', (req, res) => {
