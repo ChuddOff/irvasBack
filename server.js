@@ -3,7 +3,8 @@ import 'dotenv/config';
 import zamer from './routes/route.js';
 import { MongoClient, ServerApiVersion } from  'mongodb';
 import mongoose, {Model} from 'mongoose';
-import cors from './middlewares/cors.js'
+// import cors from './middlewares/cors.js'
+const cors = require('cors');
 import logger from './middlewares/logger.js'
 
 
@@ -12,7 +13,8 @@ const port = process.env.PORT ?? 4000;
 const app = express();
 app.use(express.json());
 app.use(logger)
-app.use(cors)
+// app.use(cors)
+app.use(cors()); 
 app.use("/api/zamer", zamer)
 
 app.get('/', (req, res) => {
