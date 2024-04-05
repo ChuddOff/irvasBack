@@ -1,3 +1,4 @@
+import logger from '../middlewares/logger.js';
 import lodzi from '../models/model.js';
 
 class Zamer{
@@ -7,6 +8,7 @@ class Zamer{
      }
      async mongopost(req, res) {
           try {
+               console.log(req);
                const {name, phone} = req.body;
 
                const isNotNewEl = await lodzi.findOne({
