@@ -1,4 +1,3 @@
-import logger from '../middlewares/logger.js';
 import lodzi from '../models/model.js';
 
 class Zamer{
