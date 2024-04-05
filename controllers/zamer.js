@@ -13,7 +13,6 @@ class Zamer{
                const isNotNewEl = await lodzi.findOne({
                     tel: phone
                })
-
                if (isNotNewEl) {
                     res.status(409).json({
                          message: 'Уже имеется'
