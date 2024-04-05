@@ -3,8 +3,7 @@ import 'dotenv/config';
 import zamer from './routes/route.js';
 import { MongoClient, ServerApiVersion } from  'mongodb';
 import mongoose, {Model} from 'mongoose';
-// import cors from './middlewares/cors.js'
-const cors = require('cors');
+import cors from 'cors';
 import logger from './middlewares/logger.js'
 
 
