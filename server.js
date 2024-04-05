@@ -16,7 +16,7 @@ app.use(cors)
 app.use("/api/zamer", zamer)
 
 app.get('/', (req, res) => {
-    res.json("text")
+    res.json("text") 
 })
 
 mongoose.connect(
