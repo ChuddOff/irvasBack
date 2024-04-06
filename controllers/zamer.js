@@ -7,7 +7,6 @@ class Zamer{
      }
      async mongopost(req, res) {
           try {
-               console.log(req);
                const {name, phone} = req.body;
 
                const isNotNewEl = await lodzi.findOne({
@@ -35,8 +34,5 @@ class Zamer{
                console.log(e, 'ЗАМЕРА не будет');
           }
      }
-     // site(req, res) {
-     //      res.sendFile('index.html')
-     // }
 }
 export default new Zamer();
