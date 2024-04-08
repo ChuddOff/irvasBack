@@ -52,6 +52,6 @@ const SchemaExtensive = new mongoose.Schema({
 });
 
 const lodzi  = new mongoose.model('Zamer', Schema);
-const lodziExtensive  = new mongoose.model('Zamer', SchemaExtensive);
+const lodziExtensive  = new mongoose.model('ZamerExtensive', SchemaExtensive);
 
 export {lodzi, lodziExtensive};
