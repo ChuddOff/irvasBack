@@ -38,7 +38,7 @@ class Zamer{
           try {
                const {name, tel, type, width, height, glass, glass2} = req.body;
 
-               const isNotNewEl = await lodzi.findOne({
+               const isNotNewEl = await lodziExtensive.findOne({
                     tel: tel
                })
                if (isNotNewEl) {
@@ -48,7 +48,7 @@ class Zamer{
                     return;
                }
 
-               const postzamer = new lodzi({
+               const postzamer = new lodziExtensive({
                     name: name,
                     tel: tel,
                     type: type,
