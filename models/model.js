@@ -25,17 +25,17 @@ const SchemaExtensive = new mongoose.Schema({
         unique: false
     },
     type: {
-        type: Integer,
+        type: Number,
         required: true,
         unique: false
     },
     width: {
-        type: Integer,
+        type: Number,
         required: true,
         unique: false
     },
     height: {
-        type: Integer,
+        type: Number,
         required: true,
         unique: false
     },
