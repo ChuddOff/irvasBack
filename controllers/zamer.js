@@ -34,7 +34,7 @@ class Zamer{
                console.log(e, 'ЗАМЕРА не будет');
           }
      }
-     async mongopost(req, res) {
+     async mongopostExtensive(req, res) {
           try {
                const {name, tel, type, width, height, glass, glass2} = req.body;
 
