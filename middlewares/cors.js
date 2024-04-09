@@ -7,7 +7,6 @@ const cors = app.use((req, res, next) => {
         res.header("Access-Control-Allow-Origin", `${process.env.API_CLIENT_URL}`)
         res.header("Access-Control-Allow-Headers", "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization, withcredentials, credentials")
         res.header("Access-Control-Allow-Methods", "*")
-        res.header("Access-Control-Allow-Methods", "*")
         res.header("Access-Control-Allow-Credentials", true)
         res.header("Access-Control-Expose-Headers", "Authorization")
     }
